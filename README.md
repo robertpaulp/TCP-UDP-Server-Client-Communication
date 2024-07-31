@@ -19,9 +19,9 @@ There are three cases:
 * TCP connection request -> accepts the connection and adds the client to the list of active clients
 * UDP connection request -> accepts the connection and go through the list of clients and the topics they are subscribed to and send the corresponding messageses
 * Message from a client:
-    * "ID" type        -> we check if it is in our list of active subscribers and if not, we add it
-    * "subscribe" type -> we add the topic to the list of topics the client is subscribed to
-    * "unsubscribe"    -> we remove the topic from the list
+    * "ID" type          -> we check if it is in our list of active subscribers and if not, we add it
+    * "subscribe" type   -> we add the topic to the list of topics the client is subscribed to
+    * "unsubscribe" type -> we remove the topic from the list
 
 The server has two core structures:
 ```cpp
